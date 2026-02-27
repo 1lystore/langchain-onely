@@ -1,0 +1,79 @@
+[project]
+name = "langchain-onely"
+version = "0.1.1"
+description = "LangChain integration for OneLy x402 marketplace - AI agents can buy and sell APIs"
+authors = [
+    {name = "1lystore", email = "admin@1ly.store"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["langchain", "ai", "agents", "x402", "onely", "marketplace", "web3", "crypto"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "pydantic>=2.0.0",
+    "requests>=2.31.0",
+    "eth-account>=0.11.0",
+    "solders>=0.21.0",
+    "solana>=0.34.0",
+    "base58>=2.1.0",
+    "x402>=2.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "python-dotenv>=1.0.0",
+    "black>=24.0.0",
+    "ruff>=0.2.0",
+]
+examples = [
+    "langchain-openai>=0.2.0",
+    "langchain-anthropic>=0.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://1ly.store"
+Documentation = "https://docs.1ly.store"
+Repository = "https://github.com/1lystore/langchain-onely"
+"Bug Tracker" = "https://github.com/1lystore/langchain-onely/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["langchain_onely"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
