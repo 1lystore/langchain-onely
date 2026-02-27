@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation refreshed for production release
 - Fixed EVM (Base) x402 signing to use official exact scheme (EIP-3009)
 - Added payment selection inputs (`preferredNetwork`, `preferredAsset`, `allowFallback`)
+- Minimum supported Python version is now 3.10+
 
 ## [0.1.0] - 2026-02-27
 

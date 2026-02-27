@@ -9,7 +9,7 @@ pip install langchain-onely
 ```
 
 **Requirements:**
-- Python 3.9+
+- Python 3.10+
 - A LangChain LLM provider (e.g., `langchain-openai`, `langchain-anthropic`)
 
 **Install with examples:**
